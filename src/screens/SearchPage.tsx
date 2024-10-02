@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getPokemonInfo } from "../Api/stateInfoApi";
-import { getImageURL } from "../Api/constants";
+import { getPokemonInfo } from "../services/stateInfoApi";
+import { getImageURL } from "../services/constants";
 import { useNavigate } from "react-router-dom";
 import PokeCard from "../components/PokeCard";
 import { bookMarkHandler } from "../utils";

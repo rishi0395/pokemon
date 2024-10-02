@@ -1,25 +1,43 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+  "manifest_version": 3,
+  "name": "My Assistant",
+  "description": "A chrome extension to interact with my assistant application.",
+  "version": "1.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAweCwfii9usszhe/sLrOD5v+vO3n2yMK6jjd8cy28AmkJzvR3FMSboaOqLExiR2oLqovPlPCDjzj/o4coJSVGOy3nMIyMyD08eUWr26OhaCNMCBF44w+IIKUbIlkHYpvOi0Q6uLaxmEN2v3SdQH6uR6LAW/fWnKMuEoKWr3VGLIOvsiN/BkWv8bOvmbeVU82HZoI7+dI9dm4yM4G2CUVP33mEBT+9w5oDvLoRuZMjde8Kn9KXlU2gvmqcewoHxDfkHqTvn1Indsg/MpqUN4wddXn9YpTqS68Mk9EjN/OOhhl99BZ87/Hs0RBoptQnXAmRZo/FzXwieQ8DbypMSEYzGwIDAQAB",
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "48": "logo_icon.png",
+    "128": "logo_icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "logo_icon.png",
+      "128": "logo_icon.png"
     },
+    "default_title": "My Assistant"
+  },
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "content_scripts": [
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": ["<all_urls>"],
+      "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["**/*", "*"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; object-src 'none'; frame-src 'none'; style-src 'self' 'unsafe-inline'; connect-src https://*.walmart.com;"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": ["sidePanel", "storage", "clipboardRead", "clipboardWrite"]
 }

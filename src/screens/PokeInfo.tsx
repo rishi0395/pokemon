@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getPokemonInfo } from "../Api/stateInfoApi";
+import { getPokemonInfo } from "../services/stateInfoApi";
 
 export default function PokeInfo() {
   const params = useLocation()?.state || {};

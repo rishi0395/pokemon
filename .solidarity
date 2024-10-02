@@ -1,0 +1,6 @@
+{
+  "requirements": {
+    "Node": [{ "rule": "cli", "binary": "node", "semver": "~20.11.0"}],
+    "NPM": [{ "rule": "cli", "binary": "npm", "semver": "^10.2.4" }]
+  }
+}

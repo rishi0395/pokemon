@@ -2,7 +2,7 @@ import React, { useEffect, memo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchStateInfo } from "../redux/actions/stateActions";
 import { getState } from "../redux/selectors";
-import { getImageURL } from "../Api/constants";
+import { getImageURL } from "../services/constants";
 
 import { useNavigate } from "react-router-dom";
 import SearchPage from "./SearchPage";

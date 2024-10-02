@@ -5,7 +5,7 @@ import {
 } from "./types";
 
 import createRequestAction from "../createRequestAction";
-import { getStateInfo } from "../../Api/stateInfoApi";
+import { getStateInfo } from "../../services/stateInfoApi";
 
 export const stateInfoStarted = () => ({
   type: STATE_INFO_STARTED,

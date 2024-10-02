@@ -5,7 +5,7 @@ import PokeInfo from "./PokeInfo";
 import SearchPage from "./SearchPage";
 import BookMarkScreen from "./BookMarkScreen";
 
-function App() {
+function RouteWrapper() {
   return (
     <Routes>
       <Route path="/listing" element={<ListingPage />} />
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouteWrapper;
