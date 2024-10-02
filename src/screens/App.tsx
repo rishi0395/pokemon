@@ -2,10 +2,9 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
-
-import configureStore from "../store";
+import configureStore from "../redux/store";
 import RouteWrapper from "./Routes";
-import "./index.css";
+import "../assets/styles/css/index.css";
 
 export const App = () => {
   const store = configureStore();

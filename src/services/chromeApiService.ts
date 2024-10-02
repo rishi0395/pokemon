@@ -1,44 +1,47 @@
-// Updated Wrapper for chrome.runtime.sendMessage
-export async function sendMessage(
-  message: any,
-  options?: chrome.runtime.MessageOptions
-): Promise<any> {
+export async function sendMessage(message: any, options?: any): Promise<void> {
   try {
-    const response = await chrome.runtime.sendMessage(message, options);
-    return response;
+    await chrome.runtime.sendMessage(message, options);
   } catch (error) {
     console.error(error);
   }
 }
 
-// Wrapper for chrome.storage.local
+export const getActiveTab = async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  return tab;
+};
+
+export const executeScript = async ({
+  target,
+  func,
+}): Promise<chrome.scripting.InjectionResult<unknown>[] | undefined> => {
+  if (typeof func === "function") {
+    return await chrome.scripting.executeScript({ target, func });
+  }
+};
+
 export function storageLocal() {
   return chrome.storage.local;
 }
 
-// Wrapper for chrome.storage.onChanged
 export function storageOnChanged(): chrome.storage.StorageChangedEvent {
   return chrome.storage.onChanged;
 }
 
-// Updated Wrapper for chrome.runtime.connect
 export function runtimeConnect(
   connectInfo?: chrome.runtime.ConnectInfo
 ): chrome.runtime.Port {
   return chrome.runtime.connect(connectInfo);
 }
 
-// Wrapper for chrome.runtime.onConnect
 export function onConnect(): chrome.runtime.ExtensionConnectEvent {
   return chrome.runtime.onConnect;
 }
 
-// Wrapper for chrome.runtime.onMessage
 export function onMessage(): chrome.runtime.ExtensionMessageEvent {
   return chrome.runtime.onMessage;
 }
 
-// Wrapper for chrome.sidePanel.setPanelBehavior
-// export function setPanelBehavior(): any {
-//     return chrome.sidePanel.setPanelBehavior;
-// }
+export function onCommand(): chrome.commands.CommandEvent {
+  return chrome.commands.onCommand;
+}

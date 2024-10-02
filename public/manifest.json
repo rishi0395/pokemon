@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "My Assistant",
-  "description": "A chrome extension to interact with my assistant application.",
+  "name": "Clipboard",
+  "description": "A chrome extension to interact with clipboard application.",
   "version": "1.0",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAweCwfii9usszhe/sLrOD5v+vO3n2yMK6jjd8cy28AmkJzvR3FMSboaOqLExiR2oLqovPlPCDjzj/o4coJSVGOy3nMIyMyD08eUWr26OhaCNMCBF44w+IIKUbIlkHYpvOi0Q6uLaxmEN2v3SdQH6uR6LAW/fWnKMuEoKWr3VGLIOvsiN/BkWv8bOvmbeVU82HZoI7+dI9dm4yM4G2CUVP33mEBT+9w5oDvLoRuZMjde8Kn9KXlU2gvmqcewoHxDfkHqTvn1Indsg/MpqUN4wddXn9YpTqS68Mk9EjN/OOhhl99BZ87/Hs0RBoptQnXAmRZo/FzXwieQ8DbypMSEYzGwIDAQAB",
   "options_ui": {
@@ -16,7 +16,7 @@
       "48": "logo_icon.png",
       "128": "logo_icon.png"
     },
-    "default_title": "My Assistant"
+    "default_title": "Clipboard"
   },
   "side_panel": {
     "default_path": "sidePanel.html"
@@ -27,6 +27,15 @@
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
+  "commands": {
+    "copy_item": {
+      "suggested_key": {
+        "default": "Ctrl+C",
+        "mac": "Command+C"
+      },
+      "description": "Add the copied item to the list"
+    }
+  },
   "web_accessible_resources": [
     {
       "matches": ["<all_urls>"],
@@ -39,5 +48,13 @@
   "background": {
     "service_worker": "js/background.js"
   },
-  "permissions": ["sidePanel", "storage", "clipboardRead", "clipboardWrite"]
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting",
+    "clipboardRead",
+    "clipboardWrite"
+  ]
 }

@@ -42,10 +42,10 @@ if [[ -z $current_version ]]; then
 fi
 
 # Name wrt environment
-name="My Assistant"
+name="Clipboard"
 
 if [[ "$environment" != "prod" ]]; then
-    name="My Assistant $environment"
+    name="Clipboard $environment"
 else
     name="$name"
 fi

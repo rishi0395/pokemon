@@ -5,7 +5,7 @@ import {
 } from "./types";
 
 import createRequestAction from "../createRequestAction";
-import { getStateInfo } from "../../services/stateInfoApi";
+import { fetchItems } from "../../services/copyApi";
 
 export const stateInfoStarted = () => ({
   type: STATE_INFO_STARTED,
@@ -24,7 +24,7 @@ export const stateInfoFailed = (error) => ({
 export function fetchStateInfo({ url = "" }) {
   return createRequestAction({
     onStart: (dispatch) => dispatch(stateInfoStarted()),
-    request: () => getStateInfo(url),
+    request: () => fetchItems(),
     onSuccess: (dispatch, resp) => {
       if (Object.keys(resp).length) {
         dispatch(stateInfoSuccess(resp));

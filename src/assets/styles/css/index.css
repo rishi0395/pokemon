@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark_blue: #002d58;
+  --light_blue: #0a66c2;
+  --grey: #d5d6d8;
+  --grey_black: #1c1c1c;
+  --light_grey: #f8f8f8;
+  --scroll_gray: #babbbe;
+}
+
+.mabe-container a {
+  color: #000000;
+}
+
+.mabe-header-footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0px;
+  width: 100vw;
+  height: 60px;
+  background: var(--white);
+}
+
+.mabe-header {
+  top: 0px;
+}
+
+.mabe-header-content {
+  display: flex;
+  margin: 0px 5px;
+  font-size: 25px;
+}
+
+.mabe-chat-btn {
+  color: black;
+  border: 1px solid var(--black);
+  border-radius: 25px;
+  padding: 5px 25px;
+  margin: 0px 5px;
+  cursor: pointer;
+  height: 45px;
+  font-size: 15px;
+}
+
+.mabe-chat-btn:active {
+  background: var(--grey);
+}
+
+.mabe-chat-icon {
+  margin: 0px 5px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  padding: 2px;
+}
+.mabe-chat-icon:hover {
+  color: var(--white);
+  background: var(--grey_black);
+  cursor: pointer;
+}
+
+.mabe-copy-icon {
+  margin: 0px 5px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  border: 1px solid var(--grey_black);
+  padding: 2px;
+  border-radius: 5px;
+}
+.mabe-copy-icon:hover {
+  color: var(--white);
+  cursor: pointer;
+  background: var(--grey_black);
+}
+.mabe-copy-icon:active {
+  color: var(--white);
+  background: var(--grey_black);
+  cursor: pointer;
+}
+
+.mabe-chat-input {
+  width: 100%;
+  padding: 5px 10px;
+  height: 32px;
+  font-size: 15px;
+  border: 1px solid var(--black);
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 520px) {
+  .mabe-header-content {
+    font-size: 15px;
+  }
+  .mabe-chat-btn {
+    padding: 5px;
+  }
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll_gray);
+  border-radius: 5px;
+}

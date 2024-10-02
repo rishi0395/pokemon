@@ -1,0 +1,151 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --dark_blue: #002d58;
+    --light_blue: #0a66c2;
+    --grey: #d5d6d8;
+    --light_grey: #f8f8f8;
+  }
+
+  .mabe-timestamp {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.mabe-content {
+    position: absolute;
+    top: 80px;
+    bottom: 60px;
+    width: 100%;
+    overflow-y: auto;
+    height: calc(100% - 210px);
+}
+
+.padding-sidepanel{
+    padding: 0 5px;
+}
+
+.padding-sidepanel-f-w{
+    padding: 0 10px;
+}
+
+
+.mabe-chatbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5px;
+}
+
+.margin-extension{
+    margin: 5px;
+}
+
+.mabe-welcomebutton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 540px;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+
+.mabe-chatbox.mabe-user {
+    justify-content: flex-end;
+    width: fit-content;
+    max-width: 90%;
+    margin: auto;
+    margin-right: 3px;
+}
+.mabe-chatbox.mabe-agent {
+    margin: auto;
+    margin-left: 0;
+    width: fit-content;
+    max-width: 90%;
+}
+
+
+.mabe-chatbox.mabe-input-container {
+    display: flex;
+    margin: 0px 10px;
+  }
+
+.mabe-chatbox > .mabe-icon {
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+}
+
+.mabe-chatbox > .mabe-msg {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    overflow-x: auto;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.mabe-chatbox > .mabe-msg::-webkit-scrollbar {
+    height: 5px;
+    cursor: pointer;
+}
+
+.mabe-chatbox > .mabe-msg::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+.mabe-chatbox > .mabe-msg::-webkit-scrollbar-thumb {
+    background: var(--scroll_gray);
+    border-radius: 5px;
+}
+
+.mabe-chatbox.mabe-user > .mabe-msg {
+    color: var(--white);
+    background-color: var(--dark_blue);
+}
+
+.mabe-msgLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.mabe-msgLinks > .mabe-link {
+    padding: 0px 20px;
+    text-align: left;
+    font-size: 20px;
+    border-radius: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.mabe-msgLinks > .mabe-link.mabe-linkedin {
+    color: var(--light_blue);
+    border: 0.5px solid var(--light_blue);
+}
+.mabe-msgLinks > .mabe-github {
+    color: black;
+    border: 0.5px solid var(--black);
+}
+
+
+.mabe-chatbox.mabe-user > .mabe-msg:after {
+    left: auto;
+    right: -12px;
+    border-color: transparent transparent var(--dark_blue) transparent;
+}
+
+.mabe-chatbox > .mabe-msg > .mabe-time {
+    font-size: 11px;
+    padding-top: 8px;
+}
+
+.mabe-chatbox.mabe-agent > .mabe-msg > .mabe-time {
+    text-align: right;
+}
