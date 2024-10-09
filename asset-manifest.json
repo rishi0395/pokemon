@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-redux-router-axios-biolerplate/static/css/main.9998997b.css",
-    "main.js": "/react-redux-router-axios-biolerplate/static/js/main.aca6a119.js",
-    "static/js/787.bee15df1.chunk.js": "/react-redux-router-axios-biolerplate/static/js/787.bee15df1.chunk.js",
-    "index.html": "/react-redux-router-axios-biolerplate/index.html",
-    "main.9998997b.css.map": "/react-redux-router-axios-biolerplate/static/css/main.9998997b.css.map",
-    "main.aca6a119.js.map": "/react-redux-router-axios-biolerplate/static/js/main.aca6a119.js.map",
-    "787.bee15df1.chunk.js.map": "/react-redux-router-axios-biolerplate/static/js/787.bee15df1.chunk.js.map"
+    "main.css": "/pokemon/static/css/main.9998997b.css",
+    "main.js": "/pokemon/static/js/main.022983af.js",
+    "static/js/787.bee15df1.chunk.js": "/pokemon/static/js/787.bee15df1.chunk.js",
+    "index.html": "/pokemon/index.html",
+    "main.9998997b.css.map": "/pokemon/static/css/main.9998997b.css.map",
+    "main.022983af.js.map": "/pokemon/static/js/main.022983af.js.map",
+    "787.bee15df1.chunk.js.map": "/pokemon/static/js/787.bee15df1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9998997b.css",
-    "static/js/main.aca6a119.js"
+    "static/js/main.022983af.js"
   ]
 }
