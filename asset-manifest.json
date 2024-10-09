@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-redux-router-axios-biolerplate/static/css/main.9998997b.css",
+    "main.js": "/react-redux-router-axios-biolerplate/static/js/main.aca6a119.js",
+    "static/js/787.bee15df1.chunk.js": "/react-redux-router-axios-biolerplate/static/js/787.bee15df1.chunk.js",
+    "index.html": "/react-redux-router-axios-biolerplate/index.html",
+    "main.9998997b.css.map": "/react-redux-router-axios-biolerplate/static/css/main.9998997b.css.map",
+    "main.aca6a119.js.map": "/react-redux-router-axios-biolerplate/static/js/main.aca6a119.js.map",
+    "787.bee15df1.chunk.js.map": "/react-redux-router-axios-biolerplate/static/js/787.bee15df1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9998997b.css",
+    "static/js/main.aca6a119.js"
+  ]
+}
