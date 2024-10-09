@@ -19,15 +19,14 @@ export default function AppProvider({ children }) {
   const [isLLDRound, setIsLLDRound] = useState(false);
 
   useEffect(() => {
+    const getInitPrompts = async () => {
+      const savedList = await getSavedPromptsApi(isLLDRound);
+      if (savedList.length > 0) {
+        setPrompt(savedList[0].val);
+      }
+    };
     getInitPrompts();
-  }, []);
-
-  const getInitPrompts = async () => {
-    const savedList = await getSavedPromptsApi(isLLDRound);
-    if (savedList.length > 0) {
-      setPrompt(savedList[0].val);
-    }
-  };
+  }, [getInitPrompts, isLLDRound]);
 
   return (
     <AppContext.Provider

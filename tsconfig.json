@@ -16,7 +16,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "checkJs": false
+    "checkJs": false,
+    "allowUnusedLabels": true
   },
   "include": ["src"]
 }
