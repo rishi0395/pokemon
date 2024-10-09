@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getSavedPromptsApi } from "../api/stateInfoApi";
+import { getSavedPromptsApi } from "../Api/stateInfoApi";
 
 const defaultContext = {
   clipboardItems: [],

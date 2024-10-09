@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "../style.css";
-import { getSavedPromptsApi, setSavedPromptsApi } from "../api/stateInfoApi";
+import { getSavedPromptsApi, setSavedPromptsApi } from "../Api/stateInfoApi";
 import { addPrompt } from "../utils";
 import { useNavigate } from "react-router-dom";
 

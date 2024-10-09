@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useAppContext } from "../../context/AppContext";
 import { useNavigate } from "react-router-dom"; // Updated import
-import { deleteAllItems, fetchItems } from "../../api/stateInfoApi";
+import { deleteAllItems, fetchItems } from "../../Api/stateInfoApi";
 import "../../style.css";
 const HeaderSection = ({ isConnected }) => {
   const navigate = useNavigate(); // Updated from useHistory to useNavigate

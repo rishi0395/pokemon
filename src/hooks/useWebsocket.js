@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { URLS } from "../api/constants";
+import { URLS } from "../Api/constants";
 import { useDispatch } from "react-redux";
 
 export const useWebsocket = ({ setClipboardItems }) => {
