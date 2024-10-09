@@ -1,17 +1,19 @@
-export const capitalizeFirstLetter = (string) =>
-  string.charAt(0).toUpperCase() + string.slice(1);
-
-export const bookMarkHandler = (poke) => {
-  const bookMarkedItems = localStorage?.getItem("pokemon");
-  if (!bookMarkedItems) {
-    localStorage?.setItem("pokemon", JSON.stringify([poke]));
-  } else {
-    if (
-      !JSON.parse(bookMarkedItems)?.filter((ele) => ele?.name === poke?.name)
-        ?.length
-    ) {
-      const list = JSON.parse(bookMarkedItems);
-      localStorage?.setItem("pokemon", JSON.stringify([...list, poke]));
+export const promptGenerator = promptObject => {
+  let prompt = '';
+  for (const key in promptObject) {
+    if (promptObject[key] && promptObject[key].trim() !== '') {
+      prompt += `${key}: ${promptObject[key]}\n`;
     }
   }
+  return prompt;
+};
+
+export const addPrompt = (savedPrompts, newVal) => {
+  const exists = savedPrompts.some(prompt => prompt.val === newVal);
+
+  if (!exists) {
+    savedPrompts.unshift({val: newVal, timestamp: new Date()});
+  }
+
+  return savedPrompts;
 };

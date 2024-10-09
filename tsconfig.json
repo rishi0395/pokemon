@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-   "target": "es5",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "strict": false, // Turn off strict mode
+    "noImplicitAny": false, // Allow implicit 'any'
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -15,7 +16,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "checkJs": false
+    "checkJs": false,
+    "allowUnusedLabels": true
   },
   "include": ["src"]
 }
